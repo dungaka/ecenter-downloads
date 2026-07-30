@@ -1,0 +1,14 @@
+name: Actions health check
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Confirm hosted runner starts
+        run: echo "GitHub Actions hosted runner is available."
